@@ -48,7 +48,6 @@
     <version.enforcer.plugin>1.3.1</version.enforcer.plugin>
     <version.compiler.plugin>3.1</version.compiler.plugin>
     <version.javadoc.plugin>2.9.1</version.javadoc.plugin>
-    <version.checkstyle.plugin>2.12.1</version.checkstyle.plugin>
     <version.surefire.plugin>2.17</version.surefire.plugin>
     <version.deploy.plugin>2.8.1</version.deploy.plugin>
 
@@ -365,32 +364,6 @@
                   <link>http://docs.oracle.com/javase/6/docs/api/</link>
                 </links>
               </configuration>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>${version.checkstyle.plugin}</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.picketlink</groupId>
-              <artifactId>picketlink-build-config</artifactId>
-              <version>${project.version}</version>
-            </dependency>
-          </dependencies>
-          <configuration>
-            <configLocation>/picketlink-checkstyle/checkstyle.xml</configLocation>
-            <consoleOutput>true</consoleOutput>
-            <failsOnError>true</failsOnError>
-            <useFile />
-          </configuration>
-          <executions>
-            <execution>
-              <id>check-style</id>
-              <phase>compile</phase>
-              <goals>
-                <goal>checkstyle</goal>
-              </goals>
             </execution>
           </executions>
         </plugin>

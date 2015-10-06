@@ -457,7 +457,7 @@ public class BasicModel {
 
         boolean hasRole = !query.getResultList().isEmpty();
 
-        if (!hasRole) {
+        if (hasRole) {
             return relationshipManager.inheritsPrivileges(assignee, role);
         }
 
